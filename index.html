@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+    
+    <div class="card">
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+
+            <h1>🤖 AI Resume Analyzer</h1>
+
+            <p class="subtitle">
+                Upload your resume and paste the job description to analyze your match.
+            </p>
+
+            <!-- Resume Upload -->
+            <div class="upload-section">
+
+                <label for="resume" class="upload-box">
+                    📄 Click to Upload Resume (PDF)
+                </label>
+
+                <input
+                    type="file"
+                    id="resume"
+                     name="resume"
+                    accept=".pdf"
+                    required
+                    hidden
+                
+>
+                <p id="fileName">No file selected</p>
+
+            </div>
+
+            <!-- Job Description -->
+            <div class="job-section">
+
+                <label for="jobDescription">
+                    Job Description
+                </label>
+
+                <textarea
+    id="jobDescription"
+    name="jobDescription"
+    placeholder="Paste the job description here..."
+    rows="10"
+    required
+></textarea>
+
+            </div>
+
+           <!-- Buttons -->
+
+<button
+    id="analyzeBtn"
+    type="submit"
+    name="action"
+    value="analyze">
+    🤖 Analyze Resume
+</button>
+
+<br><br>
+
+<button
+    id="coverBtn"
+    type="submit"
+    name="action"
+    value="cover">
+    ✍ Generate Cover Letter
+</button>
+
+</form>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 AI Resume Analyzer | Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

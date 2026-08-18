@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Report</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="result-box">
+   
+    
+    <h1>🤖 AI Resume Analysis</h1>
+
+<hr>
+
+<p class="subtitle">
+    AI Powered Resume Analysis Report
+</p>
+
+    <pre>{{ result }}</pre>
+
+    <br>
+
+    <a href="/download">
+    <button>📥 Download PDF Report</button>
+</a>
+
+<br><br>
+
+    <a href="/">
+        <button>Analyze Another Resume</button>
+    </a>
+
+</div>
+
+</body>
+</html>
